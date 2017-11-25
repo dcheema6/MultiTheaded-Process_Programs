@@ -20,13 +20,20 @@ class Point{
 
 int main(void)
 {
+	/*
+	*Uncomment the code to run task 1
+	int currThread = -1;
+	int timesRepoted = -1;
+	*/
 	Semaphore reader ("read");
+
 	Shared<Point> main("main", false);
 
 	while(true){
-		reader.Wait();
+		reader.Wait(); //comment out this line for task1
 		
 		//if loop is used in verify if data is updated in non sem version
+		//Uncomment the lines below for task 1
 		//if(currThread != main->threadID || timesRepoted != main->timesRepoted){
 		//	currThread = main->threadID;
 		//	timesRepoted = main->timesRepoted;

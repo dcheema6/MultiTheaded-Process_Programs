@@ -31,7 +31,7 @@ void threadFunc(int sleepTime, Point *main, int tID){
 	Semaphore reader ("read");
 
 	while(true){
-		guard.Wait();
+		guard.Wait(); //comment out this line for task1
 
 		stringstream ss;
 		ss << this_thread::get_id();
@@ -41,15 +41,17 @@ void threadFunc(int sleepTime, Point *main, int tID){
 		elapsedTime = time(0);
 		timesRepoted++;
 
-		reader.Signal();
-		guard.Signal();
+		reader.Signal(); //comment out this line for task1
+		guard.Signal(); //comment out this line for task1
 
 		sleep(sleepTime);
 	}
 	return;
 }
 
-//function returns true if input is a +ve integer and false otherwise
+/*
+*function returns true if input is a +ve integer and false otherwise
+*/
 bool isNumber(const string& s){
 	return !s.empty() && s.find_first_not_of("0123456789") == string::npos;
 }
