@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
      * List of image URLs of cute animals that will be displayed.
      */
     private static final List<String> urlList = new ArrayList<String>() {{
-        add("http://i.imgur.com/CPqbVW8.jpg");
+        add("http://i.imgur.com/CPqbVW8.pg");
         add("http://i.imgur.com/Ckf5OeO.jpg");
         add("http://i.imgur.com/3jq1bv7.jpg");
         add("http://i.imgur.com/8bSITuc.jpg");
